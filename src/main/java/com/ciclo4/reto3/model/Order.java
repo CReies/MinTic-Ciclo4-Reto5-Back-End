@@ -15,17 +15,17 @@ import java.util.Map;
 @AllArgsConstructor
 public class Order {
 
-    public static String PENDING = "Pendiente";
-    public static String APROVED = "Aprobada";
-    public static String REJECTED = "Rechazada";
+  public static String PENDING = "Pendiente";
+  public static String APROVED = "Aprobada";
+  public static String REJECTED = "Rechazada";
 
-    @Id
-    private Integer id;
-    private Date registerDay;
-    private String status;
-    private User salesMan;
+  @Id
+  private Integer id;
+  private Date registerDay;
+  private String status;
+  private User salesMan;
 
-    private Map<Integer, Laptop> products;
-    private Map<Integer, Integer> quantities;
+  private Map<Integer, Product> products;
+  private Map<Integer, Integer> quantities;
 
 }

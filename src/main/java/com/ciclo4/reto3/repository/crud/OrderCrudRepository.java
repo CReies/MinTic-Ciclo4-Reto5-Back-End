@@ -9,13 +9,13 @@ import java.util.Optional;
 
 public interface OrderCrudRepository extends MongoRepository<Order, Integer> {
 
-    @Query("{'salesMan.zone': ?0}")
-    List<Order> findByZone(final String country);
+  @Query("{'salesMan.zone': ?0}")
+  List<Order> findByZone(final String country);
 
-    @Query("{status: ?0}")
-    List<Order> findByStatus(final String status);
+  @Query("{status: ?0}")
+  List<Order> findByStatus(final String status);
 
-    //Para seleccionar la orden con el id maximo
-    Optional<Order> findTopByOrderByIdDesc();
+  // Para seleccionar la orden con el id maximo
+  Optional<Order> findTopByOrderByIdDesc();
 
 }
