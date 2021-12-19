@@ -116,4 +116,12 @@ public class ProductService {
     return false;
   }
 
+  public List<Product> gadgetsByPrice(double price) {
+    return productRepository.gadgetsByPrice(price);
+  }
+
+  public List<Product> findByDescriptionLike(String description) {
+    return productRepository.findByDescriptionLike(description);
+  }
+
 }

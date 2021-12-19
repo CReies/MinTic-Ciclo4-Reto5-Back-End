@@ -48,4 +48,8 @@ public class UserRepository {
     userCrudRepository.delete(user);
   }
 
+  public List<User> birthtDayList(String monthBirthtDay) {
+    return userCrudRepository.findByMonthBirthtDay(monthBirthtDay);
+  }
+
 }

@@ -65,6 +65,11 @@ public class UserController {
     return userService.authenticateUser(email, password);
   }
 
+  @GetMapping("/birthday/{month}")
+  public List<User> birthtDayList(@PathVariable("month") String monthBirthtDay) {
+    return userService.birthtDayList(monthBirthtDay);
+  }
+
   /**
    * Metodo para crear un nuevo usuario
    * 

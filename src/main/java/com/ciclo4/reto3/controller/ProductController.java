@@ -37,6 +37,16 @@ public class ProductController {
     return productService.getAll();
   }
 
+  @GetMapping("/price/{price}")
+  public List<Product> gadgetsByPrice(@PathVariable("price") double precio) {
+    return productService.gadgetsByPrice(precio);
+  }
+
+  @GetMapping("/description/{description}")
+  public List<Product> findByDescriptionLike(@PathVariable("description") String description) {
+    return productService.findByDescriptionLike(description);
+  }
+
   @PostMapping("/new")
   @ResponseStatus(HttpStatus.CREATED)
   public Product save(@RequestBody Product product) {
